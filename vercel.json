@@ -1,8 +1,4 @@
 {
   "version": 2,
-  "routes": [
-    { "src": "/certificados/(.*)", "dest": "/certificados/$1" },
-    { "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|pdf|css|js))", "dest": "/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+  "outputDirectory": "public"
 }
