@@ -12,22 +12,12 @@
 html{scroll-behavior:smooth}
 body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
 
-/* ══ HEADER ══ */
 .header{background:#fff;border-bottom:1px solid #e4e8f0;height:80px;padding:0 clamp(20px,5vw,60px);display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 16px rgba(0,0,0,.06);position:relative;z-index:20;gap:16px}
-.header-left{display:flex;align-items:center;gap:24px}
+.header-left{display:flex;align-items:center;gap:20px}
 .divider-v{width:1px;height:44px;background:#dde2ee;flex-shrink:0}
-.febay-logo{display:flex;align-items:center;gap:11px;text-decoration:none}
-.febay-icon{width:46px;height:46px;flex-shrink:0}
-.febay-text .name{font-family:'Nunito',sans-serif;font-size:24px;font-weight:800;color:#1a3a6b;letter-spacing:-.5px;line-height:1}
-.febay-text .sub{font-size:9px;font-weight:600;letter-spacing:2.2px;color:#8a96b0;text-transform:uppercase;margin-top:2px;display:block}
-.cc-logo{display:flex;align-items:center;gap:8px}
-.cc-seal{width:36px;height:36px;border-radius:50%;border:2.5px solid #c0392b;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:6px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:.3px;text-align:center;line-height:1.25;flex-shrink:0}
-.cc-text .cc-name{font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;color:#1a3a6b;line-height:1.2}
-.cc-text .cc-sub{font-size:8px;font-weight:700;color:#c0392b;letter-spacing:1.5px;text-transform:uppercase}
 .header-cta a{background:#1a3a6b;color:#fff;font-family:'Nunito',sans-serif;font-size:13px;font-weight:700;padding:9px 20px;border-radius:100px;text-decoration:none;transition:all .2s;white-space:nowrap}
 .header-cta a:hover{background:#0f2550;box-shadow:0 4px 16px rgba(26,58,107,.3)}
 
-/* ══ HERO ══ */
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,16,40,.90) 0%,rgba(14,28,65,.80) 45%,rgba(20,42,88,.55) 100%),linear-gradient(160deg,#0a1428 0%,#122044 50%,#1c3260 100%);z-index:0}
 .hero-bg::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(-55deg,transparent,transparent 40px,rgba(255,255,255,.018) 40px,rgba(255,255,255,.018) 41px);z-index:1}
@@ -39,24 +29,16 @@ body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
 .hero-h1 .accent{color:#6ab4ff}
 .hero-p{font-size:16px;color:rgba(255,255,255,.58);line-height:1.75;max-width:420px}
 
-/* Card */
 .card{background:#fff;border-radius:20px;padding:36px 32px 32px;box-shadow:0 28px 80px rgba(0,0,0,.32),0 2px 8px rgba(0,0,0,.12)}
 .card-brand{display:flex;flex-direction:column;align-items:center;margin-bottom:20px}
-.card-brand-icon{width:64px;height:64px;margin-bottom:6px}
-.card-brand-name{font-family:'Nunito',sans-serif;font-size:28px;font-weight:800;color:#1a3a6b;letter-spacing:-.8px;line-height:1}
-.card-brand-sub{font-size:8.5px;letter-spacing:2.5px;text-transform:uppercase;color:#9aa5bf;font-weight:600;margin-top:3px}
 .card-title{font-family:'Nunito',sans-serif;font-size:18px;font-weight:700;color:#1a2a4a;text-align:center;margin-bottom:5px}
 .card-sub{font-size:13px;color:#8a94aa;text-align:center;line-height:1.6;margin-bottom:24px}
 
-/* Tabs */
 .tabs{display:flex;background:#f3f5fb;border-radius:12px;padding:4px;gap:4px;margin-bottom:22px}
 .tab{flex:1;padding:10px 8px;border-radius:9px;border:none;font-family:'Nunito',sans-serif;font-size:14px;font-weight:700;color:#8a94aa;background:transparent;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:6px}
 .tab.active{background:#fff;box-shadow:0 2px 10px rgba(26,58,107,.12)}
 .tab-carro.active{color:#1a3a6b}
 .tab-hogar.active{color:#8b1a5c}
-.ins-badge{font-size:10px;font-weight:800;padding:2px 6px;border-radius:4px}
-.ins-badge.sura{background:#e8f0ff;color:#003087}
-.ins-badge.sbs{background:#f9e8f3;color:#8b1a5c}
 
 .panel{display:none}.panel.active{display:block}
 .insurer-row{display:flex;align-items:center;gap:8px;border-radius:10px;padding:9px 13px;margin-bottom:16px}
@@ -65,10 +47,7 @@ body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
 .ins-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 .ins-dot.sura{background:#003087}.ins-dot.sbs{background:#8b1a5c}
 .insurer-row span{font-size:12px;color:#5a6480;font-weight:600}
-.insurer-row strong.sura{color:#003087;font-size:13px;font-weight:800;margin-left:2px}
-.insurer-row strong.sbs{color:#8b1a5c;font-size:13px;font-weight:800;margin-left:2px}
 
-/* Inputs */
 .fg{margin-bottom:13px}
 .inp-wrap{position:relative}
 .inp-ico{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:15px;color:#c0c8da;pointer-events:none}
@@ -80,7 +59,6 @@ body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
 .ferr.on{display:block}
 .cap-row{margin:16px 0 2px;display:flex;justify-content:center;transform:scale(.88);transform-origin:center}
 
-/* Download buttons */
 .btn-dl{width:100%;padding:14px;border:none;border-radius:12px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:800;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;color:#fff}
 .btn-dl.sura-btn{background:#1a3a6b}
 .btn-dl.sura-btn:hover{background:#0f2550;box-shadow:0 8px 24px rgba(26,58,107,.35);transform:translateY(-1px)}
@@ -88,7 +66,6 @@ body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
 .btn-dl.sbs-btn:hover{background:#6e1449;box-shadow:0 8px 24px rgba(139,26,92,.35);transform:translateY(-1px)}
 .btn-dl:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
 
-/* More info link */
 .more-link{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:12px;font-size:13px;font-weight:700;text-decoration:none;transition:opacity .2s;padding:2px 0}
 .more-link.sura-l{color:#3a6abf}
 .more-link.sbs-l{color:#8b1a5c}
@@ -96,14 +73,12 @@ body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
 .more-link .arr{transition:transform .2s}
 .more-link:hover .arr{transform:translateX(3px)}
 
-/* Result / status box */
 .rbox{border-radius:10px;padding:11px 14px;font-size:13px;font-weight:600;align-items:center;gap:9px;margin-top:12px;display:none;line-height:1.5}
 .rbox.ld{display:flex;background:#eff6ff;border:1.5px solid #93c5fd;color:#1d4ed8}
 .rbox.no{display:flex;background:#fef2f2;border:1.5px solid #fca5a5;color:#b91c1c}
 .spin{width:15px;height:15px;border:2px solid rgba(29,78,216,.25);border-top-color:#1d4ed8;border-radius:50%;animation:sp .75s linear infinite;flex-shrink:0}
 @keyframes sp{to{transform:rotate(360deg)}}
 
-/* ── MULTIPLE RESULTS CARDS ── */
 .results-list{display:flex;flex-direction:column;gap:10px;margin-top:14px}
 .result-card{border-radius:12px;border:1.5px solid;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;animation:fadeIn .25s ease both}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
@@ -119,7 +94,6 @@ body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
 .rc-btn.sura-btn:hover{background:#0f2550}
 .rc-btn:disabled{opacity:.5;cursor:not-allowed}
 
-/* ══ INFO SECTIONS ══ */
 .info-section{padding:80px clamp(20px,5vw,60px);display:none}
 .info-section.visible{display:block}
 .info-inner{max-width:1100px;margin:0 auto}
@@ -166,8 +140,7 @@ body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
 .det-list li::before{content:'';width:17px;height:17px;min-width:17px;border-radius:50%;margin-top:1px;background-repeat:no-repeat;background-position:center;background-size:9px}
 .det-list.sbs-l li::before{background-color:#f0dcea;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='%238b1a5c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E")}
 .asist-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-bottom:40px}
-.asist-item{background:#fff;border-radius:11px;padding:13px 12px;display:flex;align-items:center;gap:10px}
-.asist-item.sbs-a{border:1px solid #eddde8}
+.asist-item{background:#fff;border-radius:11px;padding:13px 12px;display:flex;align-items:center;gap:10px;border:1px solid #eddde8}
 .asist-ico{font-size:20px;flex-shrink:0}
 .asist-t strong{display:block;font-size:12.5px;color:#1a2a4a;font-weight:700;margin-bottom:2px}
 .asist-t span{font-size:11px;color:#8a94aa}
@@ -196,21 +169,17 @@ footer strong{color:rgba(255,255,255,.78)}
 </head>
 <body>
 
-<!-- ══ HEADER ══ -->
 <header class="header">
   <div class="header-left">
-    <a class="febay-logo" href="#">
-      <img src="/febay.jpg" alt="Febay" style="height:48px;width:auto;object-fit:contain;">
+    <a href="#" style="display:flex;align-items:center;text-decoration:none;">
+      <img src="/febay.jpg" alt="Febay" style="height:56px;width:auto;object-fit:contain;">
     </a>
     <div class="divider-v"></div>
-    <div class="cc-logo">
-      <img src="/ccl-sello.jpg" alt="Comercial Colombiana" style="height:52px;width:auto;object-fit:contain;">
-    </div>
+    <img src="/ccl-sello.jpg" alt="Comercial Colombiana" style="height:56px;width:auto;object-fit:contain;">
   </div>
   <div class="header-cta"><a href="#certificados">Descarga tu certificado ↓</a></div>
 </header>
 
-<!-- ══ HERO ══ -->
 <section class="hero" id="certificados">
   <div class="hero-bg"></div>
   <div class="hero-inner">
@@ -222,25 +191,26 @@ footer strong{color:rgba(255,255,255,.78)}
 
     <div class="card">
       <div class="card-brand">
-        <img src="/febay.jpg" alt="Febay" style="height:70px;width:auto;object-fit:contain;margin-bottom:8px;border-radius:10px;">
+        <img src="/febay.jpg" alt="Febay" style="height:72px;width:auto;object-fit:contain;margin-bottom:10px;border-radius:8px;">
       </div>
       <div class="card-title">Certificado de Seguro</div>
       <div class="card-sub">Selecciona tu póliza e ingresa tus datos.</div>
 
       <div class="tabs">
         <button class="tab tab-carro active" id="tab-carro" onclick="switchTab('carro')">
-          🚗 Autos <img src="/SURA.png" alt="SURA" style="height:16px;width:auto;vertical-align:middle;">
+          🚗 Autos &nbsp;<img src="/SURA.png" alt="SURA" style="height:20px;width:auto;vertical-align:middle;">
         </button>
         <button class="tab tab-hogar" id="tab-hogar" onclick="switchTab('hogar')">
-          🏠 Hogar <img src="/SBS.png" alt="SBS" style="height:16px;width:auto;vertical-align:middle;">
+          🏠 Hogar &nbsp;<img src="/SBS.png" alt="SBS" style="height:20px;width:auto;vertical-align:middle;">
         </button>
       </div>
 
-      <!-- ── AUTOS ── -->
+      <!-- AUTOS -->
       <div class="panel active" id="panel-carro">
         <div class="insurer-row r-sura">
-          <div class="ins-dot sura"></div><span>Asegurado con</span>
-          <img src="/SURA.png" alt="SURA" style="height:22px;width:auto;object-fit:contain;margin-left:4px;">
+          <div class="ins-dot sura"></div>
+          <span>Asegurado con</span>
+          <img src="/SURA.png" alt="SURA" style="height:26px;width:auto;object-fit:contain;margin-left:6px;">
         </div>
         <div class="fg">
           <div class="inp-wrap"><span class="inp-ico">🪪</span>
@@ -261,11 +231,12 @@ footer strong{color:rgba(255,255,255,.78)}
         <a class="more-link sura-l" href="#info-autos" onclick="showSection('autos')">Conoce todo sobre la póliza de Autos <span class="arr">→</span></a>
       </div>
 
-      <!-- ── HOGAR ── -->
+      <!-- HOGAR -->
       <div class="panel" id="panel-hogar">
         <div class="insurer-row r-sbs">
-          <div class="ins-dot sbs"></div><span>Asegurado con</span>
-          <img src="/SBS.png" alt="SBS Seguros" style="height:22px;width:auto;object-fit:contain;margin-left:4px;">
+          <div class="ins-dot sbs"></div>
+          <span>Asegurado con</span>
+          <img src="/SBS.png" alt="SBS Seguros" style="height:26px;width:auto;object-fit:contain;margin-left:6px;">
         </div>
         <div class="fg">
           <div class="inp-wrap"><span class="inp-ico">🪪</span>
@@ -283,12 +254,12 @@ footer strong{color:rgba(255,255,255,.78)}
   </div>
 </section>
 
-<!-- ══ INFO HOGAR ══ -->
+<!-- INFO HOGAR -->
 <div class="section-sep" id="sep-hogar"></div>
 <section class="info-section" id="info-hogar" style="background:#faf5f8;">
   <div class="info-inner">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
-      <img src="/SBS.png" alt="SBS Seguros" style="height:36px;width:auto;object-fit:contain;">
+      <img src="/SBS.png" alt="SBS Seguros" style="height:40px;width:auto;object-fit:contain;">
       <div class="sec-tag sbs-tag" style="margin-bottom:0">SBS Seguros Colombia · A Fairfax Company</div>
     </div>
     <h2 class="sec-title">Póliza <em class="sbs">Hogareña</em><br>Fondo Empleados Bayer</h2>
@@ -300,46 +271,46 @@ footer strong{color:rgba(255,255,255,.78)}
       <div class="meta-chip"><div class="mk">Pago</div><div class="mv">Mensual anticipado</div></div>
     </div>
     <div class="ben-strip sbs-s">
-      <div><div class="ben-num">$4.000M</div><div class="ben-lbl">Límite Edificio / Estructura por riesgo</div></div>
+      <div><div class="ben-num">$4.000M</div><div class="ben-lbl">Límite Edificio por riesgo</div></div>
       <div><div class="ben-num">$600M</div><div class="ben-lbl">Límite Contenidos por riesgo</div></div>
-      <div><div class="ben-num">24h</div><div class="ben-lbl">Asistencia Domiciliaria ANDIASISTENCIA</div></div>
-      <div><div class="ben-num">72h</div><div class="ben-lbl">Pago siniestros hasta $3.000.000</div></div>
+      <div><div class="ben-num">24h</div><div class="ben-lbl">Asistencia ANDIASISTENCIA</div></div>
+      <div><div class="ben-num">72h</div><div class="ben-lbl">Pago siniestros hasta $3M</div></div>
     </div>
     <div class="subsec-t">Coberturas</div>
     <div class="cov-grid">
-      <div class="cov-card sbs-c"><div class="cbadge cb-b">Básica</div><div class="cov-ico">🔥</div><div class="cov-t">Incendio y Aliadas</div><div class="cov-d">Incendio, rayo, explosión, daños por agua, vientos fuertes, granizo, avalancha, AMIT, AMCCH. Tasa 0.48‰ + Terremoto 0.81‰.</div></div>
+      <div class="cov-card sbs-c"><div class="cbadge cb-b">Básica</div><div class="cov-ico">🔥</div><div class="cov-t">Incendio y Aliadas</div><div class="cov-d">Incendio, rayo, explosión, daños por agua, vientos, granizo, avalancha, AMIT, AMCCH. Tasa 0.48‰ + Terremoto 0.81‰.</div></div>
       <div class="cov-card sbs-c"><div class="cbadge cb-b">Básica</div><div class="cov-ico">🌋</div><div class="cov-t">Terremoto y Fenómenos</div><div class="cov-d">Terremoto, temblor, erupción volcánica, maremoto, marejada o tsunami e incendio consecuente.</div></div>
-      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">💻</div><div class="cov-t">Equipos Eléctricos y Electrónicos</div><div class="cov-d">TV, neveras, lavadoras, computadoras, hornos. Incluye daños accidentales. Tasa 4.00‰.</div></div>
-      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">🔒</div><div class="cov-t">Sustracción y Hurto</div><div class="cov-d">Hurto calificado y sustracción sin violencia. Incluye estafa y llamada millonaria. Tasa 2.00‰.</div></div>
-      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">⚖️</div><div class="cov-t">Responsabilidad Civil</div><div class="cov-d">Como propietario, jefe de hogar, tenedor de animales y golfista aficionado. Sin deducible.</div></div>
-      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">🏥</div><div class="cov-t">Accidentes Personales</div><div class="cov-d">Asegurado, cónyuge, hijos menores y servidores domésticos. Muerte, desmembración, incapacidad, gastos médicos.</div></div>
-      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">✈️</div><div class="cov-t">Equipos en Viaje</div><div class="cov-d">Pérdida, hurto o daño de cámaras, portátiles y tabletas. Nacional (+50 km) o internacional. Hasta $1.000.000/vigencia.</div></div>
-      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">👜</div><div class="cov-t">Documentos + Billetera</div><div class="cov-d">Hurto de billetera y reexpedición de documentos. Hasta $500.000/evento y $1.000.000/vigencia.</div></div>
-      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">🐾</div><div class="cov-t">Tu Mascota</div><div class="cov-d">Muerte accidental de perro o gato hasta $500.000/vigencia. Cremación hasta $200.000. Sin restricción de raza.</div></div>
+      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">💻</div><div class="cov-t">Equipos Eléctricos y Electrónicos</div><div class="cov-d">TV, neveras, lavadoras, computadoras. Incluye daños accidentales. Tasa 4.00‰.</div></div>
+      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">🔒</div><div class="cov-t">Sustracción y Hurto</div><div class="cov-d">Hurto calificado y sustracción. Incluye estafa y llamada millonaria. Tasa 2.00‰.</div></div>
+      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">⚖️</div><div class="cov-t">Responsabilidad Civil</div><div class="cov-d">Como propietario, jefe de hogar, tenedor de animales y golfista. Sin deducible.</div></div>
+      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">🏥</div><div class="cov-t">Accidentes Personales</div><div class="cov-d">Asegurado, cónyuge, hijos menores y servidores domésticos. Muerte, desmembración, gastos médicos.</div></div>
+      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">✈️</div><div class="cov-t">Equipos en Viaje</div><div class="cov-d">Pérdida, hurto o daño de cámaras, portátiles. Nacional (+50 km) o internacional. Hasta $1M/vigencia.</div></div>
+      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">👜</div><div class="cov-t">Documentos + Billetera</div><div class="cov-d">Hurto de billetera y reexpedición de documentos. Hasta $500.000/evento.</div></div>
+      <div class="cov-card sbs-c"><div class="cbadge cb-o">Opcional</div><div class="cov-ico">🐾</div><div class="cov-t">Tu Mascota</div><div class="cov-d">Muerte accidental perro o gato hasta $500.000/vigencia. Sin restricción de raza.</div></div>
     </div>
     <div class="det-cols">
-      <div class="det-block sbs-d"><h4>📋 Coberturas Básicas</h4><ul class="det-list sbs-l"><li>Incendio y/o impacto directo de rayo</li><li>Explosión y daños de calentadores de agua</li><li>Daños por agua y anegación</li><li>Avalancha, derrumbe, deslizamiento</li><li>Vientos fuertes, huracán, ciclón, tornado, tifón</li><li>Caída de granizo u otros cuerpos exteriores</li><li>Impacto de aeronaves y vehículos terrestres</li><li>Rotura accidental de vidrios y unidades sanitarias (10% VA)</li><li>Huelga, asonada, motín, conmoción civil (AMCCH)</li><li>Actos mal intencionados de terceros (AMIT)</li><li>Amparo automático de nuevos bienes (5% VA)</li><li>Traslado temporal de bienes (5% VA)</li><li>Alimentos refrigerados (20 SMDLV)</li><li>Amparo área de propiedad común (10% VA)</li></ul></div>
-      <div class="det-block sbs-d"><h4>💰 Deducibles</h4><ul class="det-list sbs-l"><li>Terremoto / fenómenos — 2% VA mín. 90 SMDLV</li><li>AMIT y AMCCH — 10% pérdida, mín. 30 SMDLV</li><li>Gastos adicionales del siniestro — Sin deducible</li><li>Equipos Eléctricos y Electrónicos — 10% pérdida, mín. 30 SMDLV</li><li>Sustracción / Hurto — 10% pérdida, mín. 30 SMDLV</li><li>Todo Riesgo — 10% pérdida, mín. 30 SMDLV</li><li>Responsabilidad Civil — Sin deducible</li><li>Accidentes Personales — Sin deducible</li><li>Equipos en viaje — $200.000</li><li>Documentos + Billetera — Sin deducible</li><li>Llaves Protegidas — Sin deducible</li><li>Tu Mascota — Sin deducible</li></ul></div>
-      <div class="det-block sbs-d"><h4>✨ Ventajas</h4><ul class="det-list sbs-l"><li>Indemnización sobre valor de reconstrucción del inmueble</li><li>Reposición de bienes sin demérito por uso</li><li>Gastos adicionales como suma adicional al VA (máx. 20%)</li><li>Amplia cobertura familiar en Accidentes Personales</li><li>RC incluye perjuicios extrapatrimoniales y golfistas</li><li>Protección de joyas, obras de arte y contenidos especiales</li><li>Sustracción incluye estafa y llamada millonaria</li><li>Sin restricción de raza en mascotas</li></ul></div>
-      <div class="det-block sbs-d"><h4>🏠 Asistencia Domiciliaria 24h</h4><ul class="det-list sbs-l"><li>Plomería — hasta 30 SMDLV · máx. 5 eventos/año</li><li>Electricidad — hasta 30 SMDLV · máx. 5 eventos/año</li><li>Cerrajería — hasta 30 SMDLV · máx. 5 eventos/año</li><li>Vidriería — hasta 30 SMDLV · máx. 5 eventos/año</li><li>Hotel por inhabitabilidad — 18 SMDLV/noche</li><li>Mudanza y Bodegaje — hasta 27 SMDLV</li><li>Ambulancia y médico domiciliario — ilimitado</li><li>Asesoría jurídica laboral y civil — 2 eventos/año</li><li>Retorno anticipado por siniestro — tiquete económico</li></ul></div>
+      <div class="det-block sbs-d"><h4>📋 Coberturas Básicas</h4><ul class="det-list sbs-l"><li>Incendio y/o impacto directo de rayo</li><li>Explosión y daños de calentadores de agua</li><li>Daños por agua y anegación</li><li>Avalancha, derrumbe, deslizamiento</li><li>Vientos fuertes, huracán, ciclón, tornado</li><li>Caída de granizo u otros cuerpos exteriores</li><li>Impacto de aeronaves y vehículos terrestres</li><li>Rotura accidental de vidrios (10% VA)</li><li>Huelga, asonada, motín, conmoción civil</li><li>Actos mal intencionados de terceros</li><li>Amparo automático de nuevos bienes (5% VA)</li><li>Traslado temporal de bienes (5% VA)</li><li>Alimentos refrigerados (20 SMDLV)</li></ul></div>
+      <div class="det-block sbs-d"><h4>💰 Deducibles</h4><ul class="det-list sbs-l"><li>Terremoto — 2% VA mín. 90 SMDLV</li><li>AMIT y AMCCH — 10% pérdida, mín. 30 SMDLV</li><li>Equipos Eléctricos — 10% pérdida, mín. 30 SMDLV</li><li>Sustracción / Hurto — 10% pérdida, mín. 30 SMDLV</li><li>Responsabilidad Civil — Sin deducible</li><li>Accidentes Personales — Sin deducible</li><li>Equipos en viaje — $200.000</li><li>Documentos + Billetera — Sin deducible</li><li>Tu Mascota — Sin deducible</li></ul></div>
+      <div class="det-block sbs-d"><h4>🏠 Asistencia Domiciliaria 24h</h4><ul class="det-list sbs-l"><li>Plomería — hasta 30 SMDLV · máx. 5/año</li><li>Electricidad — hasta 30 SMDLV · máx. 5/año</li><li>Cerrajería — hasta 30 SMDLV · máx. 5/año</li><li>Vidriería — hasta 30 SMDLV · máx. 5/año</li><li>Hotel por inhabitabilidad — 18 SMDLV/noche</li><li>Mudanza y Bodegaje — hasta 27 SMDLV</li><li>Ambulancia y médico domiciliario</li><li>Asesoría jurídica — 2 eventos/año</li><li>Retorno anticipado por siniestro</li></ul></div>
+      <div class="det-block sbs-d"><h4>✨ Ventajas</h4><ul class="det-list sbs-l"><li>Indemnización sobre valor de reconstrucción</li><li>Reposición sin demérito por uso</li><li>Gastos adicionales como suma adicional (máx. 20%)</li><li>Cobertura familiar amplia en Acc. Personales</li><li>RC incluye perjuicios extrapatrimoniales</li><li>Sustracción incluye estafa y llamada millonaria</li><li>Sin restricción de raza en mascotas</li></ul></div>
     </div>
     <div class="contact-strip sbs-cs">
-      <div class="cs-info"><strong>SBS Seguros Colombia S.A.</strong><br>Av Cra 9 No. 101-67 Piso 7 · Bogotá D.C.<br>T +57 (1) 313 8700 · Línea gratuita: <strong>01 8000 911 360</strong><br><a href="/cdn-cgi/l/email-protection#0a796f787c63696365246966636f647e6f4a7968796f6d7f786579246965"><span class="__cf_email__" data-cfemail="42312730342b212b2d6c212e2b272c362702312031272537302d316c212d">[email&#160;protected]</span></a> · <a href="https://www.sbseguros.co" target="_blank">www.sbseguros.co</a></div>
-      <div class="defensor-box"><strong>Defensor del Consumidor Financiero</strong>Principal: José Guillermo Peña G.<br>Suplente: César Alejandro Pérez H.<br><a href="/cdn-cgi/l/email-protection#95f1f0f3f0fbe6fae7e6f7e6d5e5f2f4f7faf2f4f1fae6bbf6faf8"><span class="__cf_email__" data-cfemail="c7a3a2a1a2a9b4a8b5b4a5b487b7a0a6a5a8a0a6a3a8b4e9a4a8aa">[email&#160;protected]</span></a><br>Tel: (1) 213 13 70 – (1) 213 13 22 · Cel: 321 924 04 79</div>
+      <div class="cs-info"><strong>SBS Seguros Colombia S.A.</strong><br>Av Cra 9 No. 101-67 Piso 7 · Bogotá D.C.<br>T +57 (1) 313 8700 · Línea gratuita: <strong>01 8000 911 360</strong><br><a href="mailto:servicio.cliente@sbseguros.co">servicio.cliente@sbseguros.co</a> · <a href="https://www.sbseguros.co" target="_blank">www.sbseguros.co</a></div>
+      <div class="defensor-box"><strong>Defensor del Consumidor Financiero</strong>Principal: José Guillermo Peña G.<br>Suplente: César Alejandro Pérez H.<br><a href="mailto:defensorsbs@pgabogados.com">defensorsbs@pgabogados.com</a><br>Tel: (1) 213 13 70 · Cel: 321 924 04 79</div>
     </div>
   </div>
 </section>
 
-<!-- ══ INFO AUTOS (placeholder) ══ -->
+<!-- INFO AUTOS -->
 <div class="section-sep" id="sep-autos"></div>
 <section class="info-section" id="info-autos" style="background:#f4f8ff;">
   <div class="info-inner">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
-      <img src="/SURA.png" alt="SURA" style="height:36px;width:auto;object-fit:contain;">
+      <img src="/SURA.png" alt="SURA" style="height:40px;width:auto;object-fit:contain;">
       <div class="sec-tag sura-tag" style="margin-bottom:0">Seguros SURA</div>
     </div>
     <h2 class="sec-title">Póliza de <em class="sura">Autos</em><br>Fondo Empleados Bayer</h2>
-    <p class="sec-desc">La información detallada de la póliza de Autos SURA estará disponible próximamente. Para consultas comunícate con Comercial Colombiana Agencia de Seguros.</p>
+    <p class="sec-desc">La información detallada de la póliza de Autos SURA estará disponible próximamente. Para consultas comunícate con Comercial Colombiana.</p>
     <div class="ben-strip sura-s">
       <div><div class="ben-num">SURA</div><div class="ben-lbl">Aseguradora líder en Colombia</div></div>
       <div><div class="ben-num">24h</div><div class="ben-lbl">Asistencia en carretera</div></div>
@@ -358,23 +329,7 @@ footer strong{color:rgba(255,255,255,.78)}
 </footer>
 <div class="toast" id="toast"><span id="t-icon"></span><span id="t-msg"></span></div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-/*
-  ══════════════════════════════════════════════════
-  CONVENCIÓN DE NOMBRES en /certificados/
-  ──────────────────────────────────────────────────
-  Hogar único:          1234567890.pdf
-  Hogar adicional:      1234567890-2.pdf
-  Hogar adicional:      1234567890-3.pdf
-  Autos:                1234567890_ABC123.pdf
-  Autos adicional:      1234567890_XYZ789.pdf  (otra placa)
-
-  El sistema prueba HEAD en /certificados/ para cada
-  combinación posible (hasta 5 riesgos por tipo).
-  ══════════════════════════════════════════════════
-*/
-
-/* ── SECCIÓN INFO ── */
+<script>
 function showSection(type){
   ['hogar','autos'].forEach(t=>{
     document.getElementById('info-'+t).classList.remove('visible');
@@ -383,59 +338,46 @@ function showSection(type){
   document.getElementById('info-'+type).classList.add('visible');
   document.getElementById('sep-'+type).classList.add('visible');
   setTimeout(()=>document.getElementById('info-'+type).scrollIntoView({behavior:'smooth',block:'start'}),60);
+  return false;
 }
 
-/* ── TABS ── */
 function switchTab(t){
   ['carro','hogar'].forEach(x=>{
     document.getElementById('tab-'+x).classList.toggle('active',x===t);
     document.getElementById('panel-'+x).classList.toggle('active',x===t);
-    document.getElementById('rbox-'+x).className='rbox';
-    document.getElementById('rbox-'+x).innerHTML='';
+    const rb=document.getElementById('rbox-'+x);
+    rb.className='rbox'; rb.innerHTML='';
     document.getElementById('results-'+x).innerHTML='';
   });
   document.querySelectorAll('.ferr').forEach(e=>e.classList.remove('on'));
   document.querySelectorAll('.inp').forEach(e=>e.classList.remove('err'));
 }
 
-/* ── VALIDATION ── */
 const vCed=v=>/^\d{6,12}$/.test(v.trim());
 const vPla=v=>/^[A-Z]{3}[0-9]{2,3}[A-Z]?$/.test(v.trim());
 function showErr(id,on){
   document.getElementById(id).classList.toggle('on',on);
   const el=document.getElementById(id.replace('err-',''));
-  if(el)el.classList.toggle('err',on);
+  if(el) el.classList.toggle('err',on);
 }
-const getCap=()=>{try{return grecaptcha.getResponse();}catch{return'';}};
+const getCap=()=>{try{return grecaptcha.getResponse();}catch{return '';}};
 const resetCap=()=>{try{grecaptcha.reset();}catch{}};
 
-/* ── CHECK IF FILE EXISTS (HEAD request) ── */
 async function fileExists(path){
-  try{
-    const r=await fetch(path,{method:'HEAD'});
-    return r.ok;
-  }catch{return false;}
+  try{const r=await fetch(path,{method:'HEAD'});return r.ok;}catch{return false;}
 }
 
-/* ── BUILD CANDIDATE PATHS ── */
-function buildCandidates(tipo, cedula, placa){
-  const base=`/certificados/`;
-  const candidates=[];
-
+function buildCandidates(tipo,cedula,placa){
+  const base='/certificados/';
   if(tipo==='hogar'){
-    // cedula.pdf, cedula-2.pdf, cedula-3.pdf … cedula-5.pdf
-    candidates.push({path:`${base}${cedula}.pdf`, label:'Hogar', detail:'Inmueble principal'});
-    for(let i=2;i<=5;i++){
-      candidates.push({path:`${base}${cedula}-${i}.pdf`, label:`Hogar ${i}`, detail:`Inmueble adicional ${i}`});
-    }
+    const list=[{path:`${base}${cedula}.pdf`,label:'Hogar',detail:'Inmueble principal'}];
+    for(let i=2;i<=5;i++) list.push({path:`${base}${cedula}-${i}.pdf`,label:`Hogar ${i}`,detail:`Inmueble adicional ${i}`});
+    return list;
   }else{
-    // cedula_PLACA.pdf — one specific vehicle
-    candidates.push({path:`${base}${cedula}_${placa}.pdf`, label:'Autos', detail:`Vehículo · ${placa}`});
+    return [{path:`${base}${cedula}_${placa}.pdf`,label:'Autos',detail:`Vehículo · ${placa}`}];
   }
-  return candidates;
 }
 
-/* ── BUSCAR ── */
 async function buscar(tipo){
   document.querySelectorAll('.ferr').forEach(e=>e.classList.remove('on'));
   document.querySelectorAll('.inp').forEach(e=>e.classList.remove('err'));
@@ -444,9 +386,7 @@ async function buscar(tipo){
   const btn=document.getElementById('btn-'+tipo);
   rl.innerHTML='';
 
-  let cedula='', placa='';
-  let ok=true;
-
+  let cedula='',placa='',ok=true;
   if(tipo==='carro'){
     cedula=document.getElementById('carro-cedula').value.trim();
     placa=document.getElementById('carro-placa').value.trim().toUpperCase();
@@ -456,7 +396,7 @@ async function buscar(tipo){
     cedula=document.getElementById('hogar-cedula').value.trim();
     if(!vCed(cedula)){showErr('err-hogar-cedula',true);ok=false;}
   }
-  if(!ok)return;
+  if(!ok) return;
 
   if(!getCap()){
     rb.className='rbox no';
@@ -468,14 +408,10 @@ async function buscar(tipo){
   rb.className='rbox ld';
   rb.innerHTML='<div class="spin"></div> Buscando tus certificados…';
 
-  const candidates=buildCandidates(tipo, cedula, placa);
-
-  // Check all candidates in parallel
-  const checks=await Promise.all(
-    candidates.map(async c=>({...c, exists: await fileExists(c.path)}))
-  );
-
+  const candidates=buildCandidates(tipo,cedula,placa);
+  const checks=await Promise.all(candidates.map(async c=>({...c,exists:await fileExists(c.path)})));
   const found=checks.filter(c=>c.exists);
+
   resetCap();
   btn.disabled=false;
   rb.className='rbox';
@@ -487,7 +423,6 @@ async function buscar(tipo){
     return;
   }
 
-  // Render one download card per result
   const colorClass=tipo==='hogar'?'sbs':'sura';
   rl.innerHTML=found.map((c,i)=>`
     <div class="result-card ${colorClass}-rc" style="animation-delay:${i*0.06}s">
@@ -495,42 +430,30 @@ async function buscar(tipo){
         <div class="rc-label">${tipo==='hogar'?'🏠':'🚗'} ${c.label}</div>
         <div class="rc-detail">${c.detail} · Cédula ${cedula}</div>
       </div>
-      <button class="rc-btn ${colorClass}-btn" onclick="descargar('${c.path}','${c.label}_${cedula}')">
-        📥 Descargar
-      </button>
+      <button class="rc-btn ${colorClass}-btn" onclick="descargar('${c.path}','${c.label}_${cedula}')">📥 Descargar</button>
     </div>`).join('');
 }
 
-/* ── DOWNLOAD ── */
-function descargar(path, filename){
+function descargar(path,filename){
   const btn=event.currentTarget;
   btn.disabled=true;
   btn.textContent='⏳ Descargando…';
-
   fetch(path)
-    .then(r=>{
-      if(!r.ok)throw new Error('No se pudo obtener el archivo.');
-      return r.blob();
-    })
+    .then(r=>{if(!r.ok)throw new Error();return r.blob();})
     .then(blob=>{
       const url=URL.createObjectURL(blob);
       const a=document.createElement('a');
-      a.href=url;
-      a.download=`Cert_${filename}.pdf`;
+      a.href=url; a.download=`Cert_${filename}.pdf`;
       document.body.appendChild(a);a.click();document.body.removeChild(a);
       setTimeout(()=>URL.revokeObjectURL(url),3000);
-      btn.disabled=false;
       btn.innerHTML='✅ Descargado';
       setTimeout(()=>{btn.disabled=false;btn.innerHTML='📥 Descargar';},3000);
     })
     .catch(()=>{
-      btn.disabled=false;
-      btn.innerHTML='❌ Error';
+      btn.disabled=false;btn.innerHTML='❌ Error';
       setTimeout(()=>{btn.innerHTML='📥 Descargar';},3000);
     });
 }
-
-/* ── INFO SECTIONS ── */
-function switchTab(t){
-  ['carro','hogar'].forEach(x=>{
-    document.getElementById('tab-'+x).classList.toggle('active',
+</script>
+</body>
+</html>
