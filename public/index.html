@@ -6,7 +6,7 @@
 <title>Febay – Certificado de Seguro</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onCaptchaLoad" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -116,7 +116,8 @@ body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
 /* Logos en tabs: altura fija con aspect-ratio libre */
 .tab-logo{height:24px;width:auto;object-fit:contain;flex-shrink:0}
 
-.panel{display:none}.panel.active{display:block}
+.panel{visibility:hidden;height:0;overflow:hidden;position:absolute;pointer-events:none}
+.panel.active{visibility:visible;height:auto;overflow:visible;position:static;pointer-events:auto}
 
 .insurer-row{
   display:flex;align-items:center;gap:10px;
@@ -330,7 +331,7 @@ footer p+p strong{color:#f0a8d0}
           </div>
           <div class="ferr" id="err-carro-placa">Ingresa una placa válida (Ej: ABC123).</div>
         </div>
-        <div class="cap-row"><div id="cap-carro"></div></div>
+        <div class="cap-row"><div class="g-recaptcha" data-sitekey="6Lf3qYgsAAAAAIUnwC9nxTQW2v2GLoglNCVX2RNm"></div></div>
         <div class="rbox" id="rbox-carro"></div>
         <div class="results-list" id="results-carro"></div>
         <button class="btn-dl sura-btn" id="btn-carro" onclick="buscar('carro')">🔍 Buscar mi certificado</button>
@@ -351,7 +352,7 @@ footer p+p strong{color:#f0a8d0}
           </div>
           <div class="ferr" id="err-hogar-cedula">Ingresa una cédula válida (6–12 dígitos).</div>
         </div>
-        <div class="cap-row"><div id="cap-hogar"></div></div>
+        <div class="cap-row"><div class="g-recaptcha" data-sitekey="6Lf3qYgsAAAAAIUnwC9nxTQW2v2GLoglNCVX2RNm"></div></div>
         <div class="rbox" id="rbox-hogar"></div>
         <div class="results-list" id="results-hogar"></div>
         <button class="btn-dl sbs-btn" id="btn-hogar" onclick="buscar('hogar')">🔍 Buscar mi certificado</button>
@@ -458,24 +459,6 @@ footer p+p strong{color:#f0a8d0}
 <div class="toast" id="toast"><span id="t-icon"></span><span id="t-msg"></span></div>
 
 <script>
-// IDs de los widgets de captcha para control manual
-let capIds = {carro: null, hogar: null};
-
-function onCaptchaLoad(){
-  // Renderizar ambos captchas manualmente (aunque uno esté oculto)
-  capIds.carro = grecaptcha.render('cap-carro', {
-    sitekey: '6Lf3qYgsAAAAAIUnwC9nxTQW2v2GLoglNCVX2RNm',
-    callback: onCaptchaSolved,
-    'expired-callback': onCaptchaExpired,
-    hl: 'es'
-  });
-  capIds.hogar = grecaptcha.render('cap-hogar', {
-    sitekey: '6Lf3qYgsAAAAAIUnwC9nxTQW2v2GLoglNCVX2RNm',
-    callback: onCaptchaSolved,
-    'expired-callback': onCaptchaExpired,
-    hl: 'es'
-  });
-}
 function onCaptchaSolved(){
   ['carro','hogar'].forEach(t=>{
     const rb=document.getElementById('rbox-'+t);
@@ -484,7 +467,6 @@ function onCaptchaSolved(){
     }
   });
 }
-function onCaptchaExpired(){}
   ['hogar','autos'].forEach(t=>{
     document.getElementById('info-'+t).classList.remove('visible');
     document.getElementById('sep-'+t).classList.remove('visible');
@@ -515,9 +497,8 @@ function showErr(id,on){
   const el=document.getElementById(id.replace('err-',''));
   if(el)el.classList.toggle('err',on);
 }
-const getActiveTab=()=>document.querySelector('.tab.active').id.replace('tab-','');
-const getCap=()=>{try{return grecaptcha.getResponse(capIds[getActiveTab()]);}catch{return'';}}
-const resetCap=()=>{try{grecaptcha.reset(capIds[getActiveTab()]);}catch{}};
+const getCap=()=>{try{return grecaptcha.getResponse();}catch{return'';}}
+const resetCap=()=>{try{grecaptcha.reset();}catch{}};
 
 async function fileExists(path){
   try{const r=await fetch(path,{method:'HEAD'});return r.ok;}catch{return false;}
