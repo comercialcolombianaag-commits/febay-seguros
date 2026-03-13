@@ -213,8 +213,9 @@ footer p+p{margin-top:6px;color:rgba(255,255,255,.45)}
 /* ══ RESPONSIVE ══ */
 @media(max-width:980px){
   .hero-inner{grid-template-columns:1fr;gap:40px;padding-top:80px}
-  .hero-copy{text-align:center}
+  .hero-copy{text-align:center;overflow:hidden;width:100%}
   .hero-p{margin:0 auto}
+  .hero-eyebrow{letter-spacing:2px;white-space:normal;text-align:center;justify-content:center;max-width:100%}
   .ben-strip{grid-template-columns:repeat(2,1fr)}
   .det-cols{grid-template-columns:1fr}
 }
@@ -240,15 +241,17 @@ footer p+p{margin-top:6px;color:rgba(255,255,255,.45)}
   .header-sep{margin:0 10px;height:32px}
   .logo-ccl{height:34px;max-width:130px}
   .header-cta{display:none}
-  .hero-inner{padding:76px 14px 44px}
-  .hero-p{font-size:15px}
+  .hero-inner{padding:76px 14px 44px;max-width:100vw}
+  .hero-h1{letter-spacing:-.5px;word-break:break-word}
+  .hero-p{font-size:15px;max-width:100%}
+  .hero-eyebrow{font-size:9px;letter-spacing:1.5px}
   .card{padding:24px 16px;border-radius:20px}
   .card-brand-logo{width:160px}
   .tabs{padding:4px;gap:4px}
   .tab{font-size:12px;padding:10px 4px;gap:5px}
   .tab-logo{height:18px}
   .ins-logo{height:26px}
-  .cap-row{transform:scale(.8);transform-origin:left center;margin-left:-4px}
+  .cap-row{transform:scale(.82);transform-origin:center;display:flex;justify-content:center}
   .cov-grid{grid-template-columns:1fr}
   .ben-strip{grid-template-columns:1fr 1fr;padding:18px 14px;gap:14px}
   .ben-num{font-size:22px}
