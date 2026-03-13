@@ -6,7 +6,7 @@
 <title>Febay – Certificado de Seguro</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onCaptchaLoad" async defer></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -330,7 +330,7 @@ footer p+p strong{color:#f0a8d0}
           </div>
           <div class="ferr" id="err-carro-placa">Ingresa una placa válida (Ej: ABC123).</div>
         </div>
-        <div class="cap-row"><div class="g-recaptcha" data-sitekey="6Lf3qYgsAAAAAIUnwC9nxTQW2v2GLoglNCVX2RNm"></div></div>
+        <div class="cap-row"><div class="g-recaptcha" data-sitekey="6Lf3qYgsAAAAAIUnwC9nxTQW2v2GLoglNCVX2RNm" data-callback="onCaptchaSolved" data-expired-callback="onCaptchaExpired"></div></div>
         <div class="rbox" id="rbox-carro"></div>
         <div class="results-list" id="results-carro"></div>
         <button class="btn-dl sura-btn" id="btn-carro" onclick="buscar('carro')">🔍 Buscar mi certificado</button>
@@ -351,7 +351,7 @@ footer p+p strong{color:#f0a8d0}
           </div>
           <div class="ferr" id="err-hogar-cedula">Ingresa una cédula válida (6–12 dígitos).</div>
         </div>
-        <div class="cap-row"><div class="g-recaptcha" data-sitekey="6Lf3qYgsAAAAAIUnwC9nxTQW2v2GLoglNCVX2RNm"></div></div>
+        <div class="cap-row"><div class="g-recaptcha" data-sitekey="6Lf3qYgsAAAAAIUnwC9nxTQW2v2GLoglNCVX2RNm" data-callback="onCaptchaSolved" data-expired-callback="onCaptchaExpired"></div></div>
         <div class="rbox" id="rbox-hogar"></div>
         <div class="results-list" id="results-hogar"></div>
         <button class="btn-dl sbs-btn" id="btn-hogar" onclick="buscar('hogar')">🔍 Buscar mi certificado</button>
@@ -458,7 +458,17 @@ footer p+p strong{color:#f0a8d0}
 <div class="toast" id="toast"><span id="t-icon"></span><span id="t-msg"></span></div>
 
 <script>
-function showSection(type){
+function onCaptchaLoad(){}
+function onCaptchaSolved(){
+  // Limpiar mensaje de error de captcha cuando el usuario lo marca
+  ['carro','hogar'].forEach(t=>{
+    const rb=document.getElementById('rbox-'+t);
+    if(rb && rb.classList.contains('no') && rb.innerHTML.includes('robot')){
+      rb.className='rbox';rb.innerHTML='';
+    }
+  });
+}
+function onCaptchaExpired(){}
   ['hogar','autos'].forEach(t=>{
     document.getElementById('info-'+t).classList.remove('visible');
     document.getElementById('sep-'+t).classList.remove('visible');
