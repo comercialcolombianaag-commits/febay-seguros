@@ -215,10 +215,11 @@ footer p+p{margin-top:6px;color:rgba(255,255,255,.45)}
 
 /* ══ RESPONSIVE ══ */
 @media(max-width:980px){
-  .hero-inner{grid-template-columns:1fr;gap:40px;padding-top:80px;width:100%;box-sizing:border-box}
+  .hero-inner{grid-template-columns:1fr;gap:40px;padding-top:80px;width:100%;box-sizing:border-box;padding-left:clamp(16px,5vw,48px);padding-right:clamp(16px,5vw,48px)}
   .hero-copy{text-align:center;overflow:hidden;width:100%;box-sizing:border-box}
   .hero-p{margin:0 auto;max-width:100%}
   .hero-eyebrow{letter-spacing:2px;white-space:normal;text-align:center;justify-content:center;max-width:100%;overflow:hidden}
+  .hero-eyebrow::before{display:none}
   .card{width:100%;max-width:100%;box-sizing:border-box}
   .ben-strip{grid-template-columns:repeat(2,1fr)}
   .det-cols{grid-template-columns:1fr}
@@ -253,7 +254,7 @@ footer p+p{margin-top:6px;color:rgba(255,255,255,.45)}
   .header-sep{margin:0 10px;height:32px}
   .logo-ccl{height:34px;max-width:130px}
   .header-cta{display:none}
-  .hero-inner{padding:76px 16px 44px;width:100%;box-sizing:border-box}
+  .hero-inner{padding:76px 16px 44px 16px;width:100%;box-sizing:border-box}
   .hero-h1{letter-spacing:0px;word-break:break-word;font-size:clamp(30px,8vw,48px)}
   .hero-p{font-size:15px;width:100%;box-sizing:border-box}
   .hero-eyebrow{font-size:9px;letter-spacing:1px;overflow:hidden;width:100%}
