@@ -14,39 +14,38 @@ body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
 
 /* ══ HEADER: fondo azul marino para que CCL blanco sea visible ══ */
 .header{
-  background:linear-gradient(135deg,#0a1828 0%,#122044 100%);
+  background:#ffffff;
+  border-bottom:2px solid #e8ecf4;
   height:90px;
   padding:0 clamp(24px,5vw,72px);
   display:flex;align-items:center;justify-content:space-between;
-  box-shadow:0 4px 24px rgba(0,0,0,.25);
+  box-shadow:0 4px 20px rgba(0,0,0,.07);
   position:sticky;top:0;z-index:100;gap:20px;
 }
 .header-logos{display:flex;align-items:center;gap:0;flex:1}
 .logo-febay{
-  height:70px;width:auto;
+  /* febay-crop.jpg es 2215x807px ratio 2.74 — controlamos por height */
+  height:72px;width:auto;
   object-fit:contain;display:block;
-  /* febay.jpg tiene fondo blanco — le damos un bg redondeado */
-  background:#fff;border-radius:12px;padding:6px 12px;
 }
 .header-sep{
   width:1.5px;height:52px;
-  background:rgba(255,255,255,.2);
+  background:#dde4f0;
   margin:0 28px;flex-shrink:0;
 }
 .logo-ccl{
-  /* ccl-blanco.png es blanco puro, perfecto sobre fondo azul */
-  height:52px;width:auto;max-width:240px;
+  /* ccl-azul-crop.jpg es 1200x368px ratio 3.26 */
+  height:64px;width:auto;max-width:260px;
   object-fit:contain;display:block;
-  filter:brightness(1.1);
 }
 .header-cta a{
-  background:#fff;color:#1a3a6b;
+  background:linear-gradient(135deg,#1a3a6b,#2a5090);color:#fff;
   font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;
   padding:11px 26px;border-radius:100px;text-decoration:none;
   transition:all .2s;white-space:nowrap;
   box-shadow:0 4px 16px rgba(0,0,0,.2);
 }
-.header-cta a:hover{background:#e8f0ff;transform:translateY(-1px);box-shadow:0 6px 22px rgba(0,0,0,.28)}
+.header-cta a:hover{background:#0f2550;transform:translateY(-1px);box-shadow:0 6px 22px rgba(26,58,107,.35)}
 
 /* ══ HERO ══ */
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
@@ -95,11 +94,10 @@ body{font-family:'Nunito Sans',sans-serif;color:#1a2a4a;background:#fff}
   padding-bottom:22px;margin-bottom:22px;
   border-bottom:1.5px solid #eef0f8;
 }
-/* febay en card: cuadrado 2500x2500 — controlamos con width fija */
+/* febay-crop.jpg es 2215x807px ratio 2.74 — ahora se ve horizontal */
 .card-brand-logo{
-  width:160px;height:160px;
-  object-fit:contain;border-radius:16px;
-  background:#f8f9ff;padding:12px;
+  width:240px;height:auto;
+  object-fit:contain;
 }
 .card-title{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;color:#1a2a4a;text-align:center;margin-bottom:6px}
 .card-sub{font-size:13px;color:#9aa5bf;text-align:center;line-height:1.6;margin-bottom:26px}
@@ -265,8 +263,8 @@ footer p+p strong{color:#f0a8d0}
 .toast.t-err{border-left:4px solid #e74c3c}
 
 @media(max-width:980px){.hero-inner{grid-template-columns:1fr;gap:48px;padding-top:90px}.hero-copy{text-align:center}.hero-p{margin:0 auto}.ben-strip{grid-template-columns:repeat(2,1fr)}.det-cols{grid-template-columns:1fr}}
-@media(max-width:640px){.header{height:74px;padding:0 18px}.logo-febay{height:54px;padding:4px 8px}.logo-ccl{height:40px;max-width:160px}.header-sep{margin:0 16px}.header-cta{display:none}.hero-inner{padding:76px 18px 56px}.card{padding:28px 20px}.card-brand-logo{width:130px;height:130px}.info-section{padding:56px 18px}.cov-grid{grid-template-columns:1fr 1fr}.asist-grid{grid-template-columns:1fr 1fr}.ben-strip{padding:22px 18px}.cap-row{transform:scale(.82);transform-origin:left}.contact-strip{flex-direction:column}.cs-left{flex-direction:column;align-items:flex-start}}
-@media(max-width:420px){.cov-grid{grid-template-columns:1fr}.asist-grid{grid-template-columns:1fr}.card-brand-logo{width:110px;height:110px}}
+@media(max-width:640px){.header{height:74px;padding:0 18px}.logo-febay{height:64px;padding:6px 12px;max-width:200px}.logo-ccl{height:40px;max-width:160px}.header-sep{margin:0 16px}.header-cta{display:none}.hero-inner{padding:76px 18px 56px}.card{padding:28px 20px}.card-brand-logo{width:170px;height:170px}.info-section{padding:56px 18px}.cov-grid{grid-template-columns:1fr 1fr}.asist-grid{grid-template-columns:1fr 1fr}.ben-strip{padding:22px 18px}.cap-row{transform:scale(.82);transform-origin:left}.contact-strip{flex-direction:column}.cs-left{flex-direction:column;align-items:flex-start}}
+@media(max-width:420px){.cov-grid{grid-template-columns:1fr}.asist-grid{grid-template-columns:1fr}.card-brand-logo{width:150px;height:150px}}
 </style>
 </head>
 <body>
@@ -274,9 +272,9 @@ footer p+p strong{color:#f0a8d0}
 <!-- ══ HEADER ══ -->
 <header class="header">
   <div class="header-logos">
-    <img src="/logos/febay.jpg" alt="Febay – Fondo de Empleados Bayer" class="logo-febay">
+    <img src="/logos/febay-crop.jpg" alt="Febay – Fondo de Empleados Bayer" class="logo-febay">
     <div class="header-sep"></div>
-    <img src="/logos/ccl-blanco.png" alt="Comercial Colombiana Agencia de Seguros" class="logo-ccl">
+    <img src="/logos/ccl-azul-crop.jpg" alt="Comercial Colombiana Agencia de Seguros" class="logo-ccl">
   </div>
   <div class="header-cta">
     <a href="#certificados">Descarga tu certificado ↓</a>
@@ -295,7 +293,7 @@ footer p+p strong{color:#f0a8d0}
 
     <div class="card">
       <div class="card-brand">
-        <img src="/logos/febay.jpg" alt="Febay" class="card-brand-logo">
+        <img src="/logos/febay-crop.jpg" alt="Febay" class="card-brand-logo">
       </div>
       <div class="card-title">Certificado de Seguro</div>
       <div class="card-sub">Selecciona tu póliza e ingresa tus datos</div>
